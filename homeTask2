@@ -1,0 +1,30 @@
+   2 task
+       function squaredNumber(value){
+           let result = "";
+           for (let i = 0; i < 100; i++){
+               console.log(i ** 2);
+           }
+                 console.log(result);
+               }
+    squaredNumber(100);
+//       2.1 task
+       function getArray(){
+            let result = [];
+            for (let i = 0; i < 100; i++){
+            result[i] = i ** 2;
+        }
+        return result;
+        }
+
+       console.log(getArray());
+//       2.2 task
+
+       let numbers = getArray;
+       function arraySum(numbers) {
+           let sum = 0;
+           for(let i = 0; i < numbers.length; i++){
+           sum += array[i];
+           }
+           return sum;
+       }
+       console.log(arraySum(numbers));
