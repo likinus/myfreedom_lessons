@@ -1,0 +1,11 @@
+  3 task
+       function squaredNumber(value){
+           let result = "";
+           let i = 0;
+           while (i < 100){
+               console.log(i ** 2);
+               i++;
+           }
+           console.log(result);
+       }
+       squaredNumber();
