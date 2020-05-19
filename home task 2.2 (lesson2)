@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var arr = [5, 4, 3, 8, 0];
+        function filterFor(arr, a){
+            let result = [];
+            for (let element of arr){
+                if (element >= a){
+                    result.push(element);
+                }
+            }
+            return result;
+        }
+        console.log(filterFor(arr, 3.11));
+</script>
+</body>
+</html>
