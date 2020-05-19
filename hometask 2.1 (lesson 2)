@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        Task1
+    var arr = [5, 4, 3, -3, -10, -1, 8, -20, 0];
+      function findPositiveNumbers(arr){
+          let result = [];
+            for(let element of arr){
+                if (element >= 0 ){
+                  result.push(element);
+                }
+            }
+           return result;
+        }
+        console.log(findPositiveNumbers(arr));
+</script>
+</body>
+</html>
