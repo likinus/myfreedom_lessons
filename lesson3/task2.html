@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let users = [{name: "igor", age: 26}, {name: "Alex", age: 17}, {name: "Sasha", age: 31}];
+        function adultFilter(users){
+            const result = [];
+            for(let user of users){
+                if (user.age > 18){
+                    result.push(user);
+                }
+            }
+           return result;
+        }
+        console.log(adultFilter(users));
+        
+//        task 2 (method2)
+
+        let users = [{name: "igor", age: 26}, {name: "Alex", age: 17}, {name: "Sasha", age: 31}];
+        function adultFilter(users){
+            return users.filter(user => user.age > 18);
+        }
+        console.log(adultFilter(users));
+    </script>
+</body>
+</html>
