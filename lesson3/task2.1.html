@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let users = [{name: "igor", age: 26}, {name: "Alex", age: 17}, {name: "Sasha", age: 31}];
+        function adultFilter(users, func){
+            const result = [];
+            for(let user of users){
+                if (func(user.name)){
+                    result.push(user);
+                }
+            }
+           return result;
+        }
+        console.log(adultFilter(users, myFunc));
+            function myFunc(name){
+            if (name[0] === 'S'){
+                return true;
+            } else {
+                return false;
+            }
+        }
+     </script>
+</body>
+</html>
