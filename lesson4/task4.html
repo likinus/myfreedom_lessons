@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <ul>
+
+   </ul>
+    <script>
+       let orders = [{
+name: "Женя",
+order: true
+},
+{
+name: "Кристина",
+order: true
+},
+{
+name: "Павел",
+order: false
+},
+{
+name: "Виолетта",
+order: false
+},
+{
+name: "Костя",
+order: true
+}];
+for (let order of orders){
+     let li = document.createElement('li');
+    document.body.firstElementChild.append(li);
+    if(orders.name == true){
+        li.textContent = 'Клиент ' + order.name + " оплатил заказ"
+    } else {
+        li.textContent = 'Клиент ' + order.name + " отменил заказ"
+    }
+     }
+    </script>
+</body>
+</html>
