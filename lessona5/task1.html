@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <input>
+   <ul></ul>
+    <script>
+        function addElement(event){
+            const li = document.createElement('li');
+            li.textContent = document.querySelector('input').value;
+            const ul = document.querySelector('ul');
+            ul.appendChild(li);
+        }
+
+        let input = document.querySelector('input');
+        input.addEventListener('input', addElement);
+    </script>
+</body>
+</html>
