@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <form>
+       <input id="firstInput" type="number">
+       <select>
+           <option value="/">/</option>
+           <option value="*">*</option>
+           <option value="+">+</option>
+           <option value="-">-</option>
+       </select>
+
+       <input id="secondInput" type="number">
+       <button type="submit">Кнопка</button>
+   </form>
+   <div></div>
+
+    <script>
+    document.querySelector('form').addEventListener('submit', function(event){
+        let result = 0;
+        let firstInput = document.getElementById('firstInput').value;
+        let secondInput = document.getElementById('secondInput').value;
+        let select = document.querySelector('select').value;
+        let div = document.querySelector('div');
+        event.preventDefault();
+        switch (select){
+            case "/":
+                result += firstInput / secondInput;
+                break;
+            case '*':
+                result += firstInput * secondInput;
+                break;
+            case '+':
+                result += +firstInput + +secondInput;
+                break;
+            case '-':
+                result += firstInput - secondInput;
+                break;
+        }
+
+        div.textContent = +result;
+
+    })
+    </script>
+</body>
+</html>
