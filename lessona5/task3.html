@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <form>
+    <input class="expression">
+    <button type="submit">Кнопка</button>
+   </form>
+   <ul></ul>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event){
+            event.preventDefault();
+            const input = document.querySelector('input');
+            let li = document.createElement('li');
+            let ul = document.querySelector('ul');
+            li.textContent = input.value;
+            ul.appendChild(li);
+            this.reset();
+
+        })
+    </script>
+</body>
+</html>
