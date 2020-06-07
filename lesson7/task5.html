@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var users = [
+            {
+            name: "Женя",
+            phone: "+375295012091",
+            operator: "МТС"
+            },
+            {
+            name: "Вася",
+            phone: "+375299876543",
+            operator: "МТС"
+            },
+            {
+            name: "Татьяна",
+            phone: "+375299001122",
+            operator: "Velcom"
+            },
+            {
+            name: "Аня",
+            phone: "+375291234567",
+            operator: "Velcom"
+            }];
+
+        function byField(field){
+            return (a, b) => a[field] > b[field] ? 1 : -1;
+        }
+
+        users.sort(byField('name'));
+        users.forEach(user => console.log(user.name));
+
+    </script>
+</body>
+</html>
