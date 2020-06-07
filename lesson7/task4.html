@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getMiddle(string){
+            result = '';
+            let length = string.length;
+            
+            if (length % 2 === 0){
+                result += string[length / 2 - 1] + string[length / 2];
+            } else {
+                result += string[(length - 1) / 2];
+            }
+            return result;
+        }
+
+        console.log(getMiddle('boris'));
+    </script>
+</body>
+</html>
