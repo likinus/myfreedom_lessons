@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let arr = [2, 1, 1, 1, 1, 1, 1]
+        function findUniq(arr) {
+          let uniqDigit;
+          if (arr[0] == arr[1] || arr[0] == arr[2]) {
+            uniqDigit = arr[0];
+          } else {
+            return arr[0];
+          }
+
+          for (let element of arr) {
+            if (uniqDigit != element) return element;
+          }
+        }
+        console.log(findUniq(arr));
+    </script>
+</body>
+</html>
