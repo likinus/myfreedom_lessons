@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function timeout(ms){
+            return new Promise(regect => setTimeout(regect, ms));
+        }
+
+    timeout(3000).then(() => console.log('Error'));
+    </script>
+</body>
+</html>
