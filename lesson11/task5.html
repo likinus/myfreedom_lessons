@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let calc = {value: 0};
+
+        calc.plus = function(){
+            calc.value += 1
+        }
+
+        calc.minus = function(){
+            calc.value -= 1;
+        }
+
+        calc.read = function (){
+            console.log(this.value);
+        }
+    </script>
+</body>
+</html>
