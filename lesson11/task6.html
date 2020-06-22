@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let calc = {value: 0};
+
+        calc.plus = function(value1, value2){
+            this.value = value1 + value2;
+        }
+        calc.minus = function(value1, value2){
+            this.value = value1 - value2;
+        }
+        calc.multiply = function(value1, value2){
+            this.value = value1 * value2;
+        }
+        calc.devide = function(value1, value2){
+            this.value = value1 / value2;
+        }
+        calc.read = function(){
+            console.log(this.value);
+        }
+    </script>
+</body>
+</html>
