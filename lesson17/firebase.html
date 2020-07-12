@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name">
+    <input id="surname">
+    <button>Button</button>
+    <ul></ul>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyC2X69kHXcPPiXFIEtkiZVPwVQyNe-vlRg",
+          authDomain: "hometask-872c2.firebaseapp.com",
+          databaseURL: "https://hometask-872c2.firebaseio.com",
+          projectId: "hometask-872c2",
+          storageBucket: "hometask-872c2.appspot.com",
+          messagingSenderId: "387666902623",
+          appId: "1:387666902623:web:0f265f84ab67809ae9a5ea"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        var db = firebase.firestore();
+
+        function createNewItem(name, surname) {
+            db.collection('Ihar').add(
+            {
+              name: name,
+              surname: surname  
+            })
+            .then(function(docRef) {
+                console.log('Document written with ID: ', docRef.id);
+            })
+            .catch(function(error) {
+                console.error('Error adding document: ', error);
+            })
+        }
+        
+        function readAlldata(){
+            return db.collection("Ihar").get();
+        }
+
+        function displayAllData() {
+            let ul = document.querySelector('ul');
+            ul.innerHTML = null;
+            readAlldata().then((tasks) => {
+                tasks.forEach((doc) => {
+                    let li = document.createElement('li')
+                    li.textContent = JSON.stringify(doc.data())
+                    ul.append(li);
+                });
+            });
+        }
+
+        document.querySelector('button').addEventListener('click', () => {
+            createNewItem(document.getElementById('name').value, document.getElementById('surname').value);
+            displayAllData()
+        })
+        displayAllData();
+      </script>
+</body>
+</html>
